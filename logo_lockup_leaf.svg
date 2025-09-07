@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="160" viewBox="0 0 520 160">
+  <title>B-NEXT ロゴ（中央B＋葉っぱ）</title>
+
+  <!-- シンボルの円 -->
+  <circle cx="80" cy="80" r="60" fill="#3ba779"/>
+
+  <!-- 円の中のB（中央配置） -->
+  <text x="80" y="100"
+        text-anchor="middle"
+        font-family="'Times New Roman','Georgia','Playfair Display',serif"
+        font-weight="700" font-size="70" fill="white">
+    B
+  </text>
+
+  <!-- 葉っぱ（Bの右上に円の内側で） -->
+  <g transform="translate(105,55) rotate(-15)">
+    <path d="M0 0 C 18 -6, 34 4, 36 18 C 22 16, 8 10, 0 0 Z" fill="white" opacity="0.95"/>
+    <path d="M0 0 C 8 6, 16 16, 14 28 C 6 22, 3 12, 0 0 Z" fill="white" opacity="0.85"/>
+  </g>
+
+  <!-- ロゴテキスト -->
+  <text x="170" y="75"
+        font-family="'Playfair Display','Times New Roman',serif"
+        font-weight="600" font-size="46" fill="#23343a">
+    B-NEXT
+  </text>
+  <text x="170" y="120"
+        font-family="'Noto Sans JP', sans-serif"
+        font-weight="300" font-size="26" fill="#23343a">
+    就労継続支援B型事業所
+  </text>
+</svg>
