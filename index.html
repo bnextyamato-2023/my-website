@@ -49,6 +49,62 @@
       color: var(--dark);
       font-weight: bold;
     }
+
+
+
+
+/* PC用（デフォルト） */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/*  スマホ用 */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 70px; 
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav a {
+    color: white;
+    padding: 8px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: var(--dark);
+  }
+}
+
+
+
    .hero {
   text-align: center;
   padding: 80px 20px;
@@ -58,13 +114,13 @@
 }
 
     .hero h1 {
-  font-size: 3rem;   /* タイトル大きめ */
+  font-size: 3rem;   
   margin-bottom: 15px;
   font-weight: bold;
 }
 
 .hero p {
-  font-size: 1.5rem; /* サブコピー少し大きめ */
+  font-size: 1.5rem; 
 }
 
     section {
@@ -210,20 +266,22 @@ section {
  <header>
   <img src="logo_lockup_leaf.svg" alt="B-NEXTロゴ">
 
+  
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
   <nav>
-  <a href="#about">事業所について</a> <span class="divider">｜</span>
-  <a href="#services">活動内容</a> <span class="divider">｜</span>
-  <a href="#features">サポート内容</a> <span class="divider">｜</span>
-  <a href="#recruit">募集要項</a> <span class="divider">｜</span>
- <a href="#flow">ご利用の流れ</a> <span class="divider">｜</span>
-  <a href="#overview">事業所概要</a> <span class="divider">｜</span>
-  <a href="#access">アクセス</a> <span class="divider">｜</span>
-  <a href="#contact">お問い合わせ</a>
-
- <span class="divider">｜</span>
-  <a href="#group">グループ事業所</a>
-
-</nav>
+    <ul>
+      <li><a href="#about">事業所について</a></li>
+      <li><a href="#services">活動内容</a></li>
+      <li><a href="#features">サポート内容</a></li>
+      <li><a href="#recruit">募集要項</a></li>
+      <li><a href="#flow">ご利用の流れ</a></li>
+      <li><a href="#overview">事業所概要</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+      <li><a href="#group">グループ事業所</a></li>
+    </ul>
+  </nav>
 </header>
 
 
@@ -471,5 +529,12 @@ section {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
+
+<script>
+  function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("show");
+  }
+</script>
+
 </body>
 </html>
