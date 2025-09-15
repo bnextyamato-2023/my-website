@@ -401,6 +401,9 @@ section {
     <li>所 在 地：神奈川県大和市林間１丁目１５−３２ 神代ビル１階</li>
     <li>電話番号：046-271-6636　FAX番号：046-271-6637</li>
     <li>Email：yamato.b.next@gmail.com</li>
+   <li>運営法人：一般社団法人B-NEXT</li>
+   <li>代表理事：管野 幸利</li>
+
   </ul>
 </section>
 
@@ -533,6 +536,19 @@ section {
   function toggleMenu() {
     document.querySelector("nav ul").classList.toggle("show");
   }
+
+
+// メニュー内のリンクをクリックしたら閉じる
+  document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", function() {
+        document.querySelector("nav ul").classList.remove("show");
+      });
+    });
+  });
+
+
 </script>
 
 </body>
